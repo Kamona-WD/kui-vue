@@ -8,7 +8,7 @@ export interface KuiOptions {
 
 export const createKUI = (options: KuiOptions) => {
   const install = (app: App) => {
-    const { auttoRegisterComponents = false, components = {}, directives = {} } = options
+    const { components = {}, directives = {} } = options
 
     for (const key in directives) {
       const directive = directives[key]

@@ -1,5 +1,5 @@
 @import './_vars.css';
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+@import '../components/index.css';
 @import 'tailwindcss/utilities';
-@import '../components/loading/style.css';
