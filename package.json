@@ -2,9 +2,34 @@
   "name": "@kamona/kui-vue",
   "version": "0.0.1",
   "description": "Vuejs v3 ui components",
-  "main": "index.js",
+  "main": "dist/js/kui.cjs.js",
+  "module": "dist/js/kui.esm.js",
+  "jsdelivr": "dist/js/kui.umd.js",
+  "unpkg": "dist/js/kui.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "run-p js:watch css:watch",
+    "build": "run-s js css",
+    "lint": "eslint --ext .ts src/**",
+    "format": "prettier --write src",
+    "prejs": "rimraf ./dist/js",
+    "js": "rollup -c",
+    "js:watch": "rollup -c -w",
+    "precss": "rimraf ./dist/css",
+    "css": "postcss src/css/style.css -o dist/css/style.css",
+    "css:watch": "postcss src/css/style.css -o dist/css/style.css -w",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "src/**/*.css": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -14,6 +39,10 @@
     "ui",
     "vue",
     "components"
+  ],
+  "files": [
+    "dist",
+    "examples"
   ],
   "author": {
     "name": "Ahmed Kamel",
@@ -27,5 +56,31 @@
   "homepage": "https://github.com/Kamona-WD/kui-vue#readme",
   "peerDependencies": {
     "vue": ">=3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@typescript-eslint/parser": "^4.28.1",
+    "@vue/babel-plugin-jsx": "^1.0.6",
+    "autoprefixer": "^10.2.6",
+    "eslint": "^7.29.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.5",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.52.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "tailwindcss": "^2.2.4",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.4",
+    "vue": "^3.1.2"
   }
 }
