@@ -1,0 +1,31 @@
+{
+  "name": "@kamona/kui-vue",
+  "version": "0.0.1",
+  "description": "Vuejs v3 ui components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kamona-WD/kui-vue.git"
+  },
+  "keywords": [
+    "ui",
+    "vue",
+    "components"
+  ],
+  "author": {
+    "name": "Ahmed Kamel",
+    "email": "ak3849909@gmail.com",
+    "url": "https://github.com/Kamona-WD"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kamona-WD/kui-vue/issues"
+  },
+  "homepage": "https://github.com/Kamona-WD/kui-vue#readme",
+  "peerDependencies": {
+    "vue": ">=3"
+  }
+}
