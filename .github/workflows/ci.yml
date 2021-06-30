@@ -15,5 +15,5 @@ jobs:
         run: npm run format
       - name: Run ESlint
         run: npm run lint
-      - name: Run Buid
+      - name: Run Build
         run: npm run build
