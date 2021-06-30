@@ -9,14 +9,14 @@
   "scripts": {
     "dev": "run-p js:watch css:watch",
     "build": "run-s js css",
-    "lint": "eslint --ext .ts src/**",
+    "lint": "cross-env eslint --ext js,jsx,ts,tsx './src/**'",
     "format": "prettier --write src",
     "prejs": "rimraf ./dist/js",
     "js": "rollup -c",
     "js:watch": "rollup -c -w",
     "precss": "rimraf ./dist/css",
-    "css": "postcss src/css/style.css -o dist/css/style.css",
-    "css:watch": "postcss src/css/style.css -o dist/css/style.css -w",
+    "css": "postcss src/css/style.css -o dist/css/kui.css",
+    "css:watch": "postcss src/css/style.css -o dist/css/kui.css -w",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -66,6 +66,7 @@
     "@typescript-eslint/parser": "^4.28.1",
     "@vue/babel-plugin-jsx": "^1.0.6",
     "autoprefixer": "^10.2.6",
+    "cross-env": "^7.0.3",
     "eslint": "^7.29.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
@@ -77,6 +78,7 @@
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.52.3",
+    "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "tailwindcss": "^2.2.4",
     "tslib": "^2.3.0",

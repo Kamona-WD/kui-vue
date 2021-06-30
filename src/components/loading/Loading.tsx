@@ -28,7 +28,7 @@ export default defineComponent({
     const displayText = () => {
       return (
         <span
-          class={`inline-block ${vertical.value ? 'mt-1' : 'ml-2 rtl:ml-0 rtl:mr-2'}`}
+          class={`kui-inline-block ${vertical.value ? 'kui-mt-1' : 'kui-ml-2 rtl:kui-ml-0 rtl:kui-mr-2'}`}
           style={{
             fontSize: textSize.value,
           }}
@@ -39,9 +39,16 @@ export default defineComponent({
     }
 
     return () => (
-      <div class={`inline-flex items-center ${vertical.value ? 'flex-col justify-center' : 'flex-row'}`}>
-        <div class="k-loading" style={`--k-loading-border-color: ${color.value}; --k-loading-size: ${size.value}`}>
-          <div class="k-loading__inner"></div>
+      <div
+        class={`kui-inline-flex kui-items-center ${
+          vertical.value ? 'kui-flex-col kui-justify-center' : 'kui-flex-row'
+        }`}
+      >
+        <div
+          class="kui-loading"
+          style={`--kui-loading-border-color: ${color.value}; --kui-loading-size: ${size.value}`}
+        >
+          <div class="kui-loading__inner"></div>
         </div>
         {slots.default && displayText()}
       </div>

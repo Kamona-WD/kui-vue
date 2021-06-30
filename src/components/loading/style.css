@@ -1,8 +1,6 @@
-@layer components {
-  .k-loading {
-    @apply inline-block w-[var(--k-loading-size)] h-[var(--k-loading-size)];
-  }
-  .k-loading__inner {
-    @apply animate-spin border-l-[color:var(--k-loading-border-color)] border-r-[color:var(--k-loading-border-color)] border-t-transparent border-b-transparent block w-full h-full rounded-full border-4;
-  }
+.kui-loading {
+  @apply kui-inline-block kui-w-[var(--kui-loading-size)] kui-h-[var(--kui-loading-size)];
+}
+.kui-loading__inner {
+  @apply kui-animate-spin kui-border-l-[color:var(--kui-loading-border-color)] kui-border-r-[color:var(--kui-loading-border-color)] kui-border-t-transparent kui-border-b-transparent kui-block kui-w-full kui-h-full kui-rounded-full kui-border-4;
 }
