@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "run-p js:watch css:watch",
     "build": "run-s js css",
-    "lint": "cross-env eslint --ext js,jsx,ts,tsx ./src/**",
+    "lint": "cross-env eslint --ext js,jsx,ts,tsx './src/**'",
     "format": "prettier --write src",
     "prejs": "rimraf ./dist/js",
     "js": "rollup -c",
