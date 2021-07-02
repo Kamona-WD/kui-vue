@@ -9,7 +9,8 @@
     "baseUrl": "./",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "types": ["jest"]
   },
   "include": ["src"],
   "exclude": ["dist", "node_modules"]

@@ -11,4 +11,17 @@ module.exports = {
     ['@babel/preset-typescript'],
   ],
   plugins: ['@vue/babel-plugin-jsx'],
+  env: {
+    test: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: { node: true },
+            modules: 'commonjs',
+          },
+        ],
+      ],
+    },
+  },
 }
